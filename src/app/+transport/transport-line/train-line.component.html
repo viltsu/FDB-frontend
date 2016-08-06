@@ -1,0 +1,12 @@
+<div>
+  <span *ngIf="train.late > 0">
+    {{train.arrival | date:"HH.mm" }}
+    ->
+    {{train.estimate | date:"HH.mm" }}
+  </span>
+  <span *ngIf="train.late === 0">
+    {{train.arrival | date:"HH.mm" }}
+  </span>
+  {{train.line}}
+  {{train.destination}}
+</div>

@@ -1,0 +1,7 @@
+<div class="rain-map" *ngIf="rainMaps">
+  <img src="{{rainMaps[active].image}}" />
+  <br>
+  <span class="rain-map-time" *ngFor="let rainMap of rainMaps; let i=index" [ngClass]="{active: i === active}" (click)="setActive(i)">
+    {{rainMap.time}}&nbsp;
+  </span>
+</div>
